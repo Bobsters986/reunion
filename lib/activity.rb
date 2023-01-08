@@ -22,8 +22,8 @@ class Activity
   def owed
     name_money_owed = Hash.new
     
-    participants.each do |participant, cost|
-      name_money_owed[participant] = (split - cost)
+    participants.each do |participant, money_spent|
+      name_money_owed[participant] = (split - money_spent)
     end
 
     name_money_owed
